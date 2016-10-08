@@ -1,14 +1,35 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Workspace</title>
+  <title>Rumblrr</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
+    <div ="wrapper">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3">
+                    <%= render 'shared/sidebar' %>
+                </div>
+            </div>
+        </div>
+        
 
-<%= yield %>
+        <!-- Page Content -->
+        <div id="page-content-wrapper">
+            <div class="container lefter">
+                <div class="row">
+                    <div class="col-lg-9">
+                      <%= yield %>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /#page-content-wrapper -->
+    </div>
+
 
 </body>
 </html>
