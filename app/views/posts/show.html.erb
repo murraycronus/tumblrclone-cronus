@@ -1,16 +1,18 @@
 
 <div class="jumbotron">
     <div class="container">
-        <div class="col-sm-8 col-sm-offset-4">
+        <div class="col-sm-8 col-sm-offset-2">
             <h2>
                 <%= @post.title %>
             </h2>
-            <small>
-                Submitted <%= time_ago_in_words(@post.created_at) %>
-            </small>
             <p>
                 <%= @post.body %>
             </p>
+            <small>
+                Submitted <%= time_ago_in_words(@post.created_at) %><br>
+                <%= link_to 'Edit', edit_post_path(@post), class: "label label-primary" %>
+                <%= link_to 'Delete', post_path(@post), method: :delete, class: 'label label-danger' %>
+            </small>
         </div>
     </div>
 </div>

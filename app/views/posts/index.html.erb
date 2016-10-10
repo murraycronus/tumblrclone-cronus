@@ -6,7 +6,7 @@
             </h1>
             
             <p>
-                Submitted <%= time_ago_in_words(post.created_at) %>
+                Submitted <%= time_ago_in_words(post.created_at) %> | <%= link_to 'Edit', edit_post_path(post), class: "label label-primary" %>
             </p>
             
             <p>
