@@ -16,3 +16,13 @@
         </div>
     </div>
 </div>
+
+<div id="comments" align="center">
+  <h2>Comments</h2>
+  <h4><%= @post.comments.count %> comments</h4>
+  <%= render @post.comments %><br>
+  <div class="col-sm-8 col-sm-offset-2">
+    <h3>Post a comment</h3>
+    <%= render 'comments/form' %>
+</div>
+</div>
