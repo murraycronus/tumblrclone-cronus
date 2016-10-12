@@ -10,8 +10,10 @@
             </p>
             <small>
                 Submitted <%= time_ago_in_words(@post.created_at) %><br>
+                <% if user_signed_in? %>
                 <%= link_to 'Edit', edit_post_path(@post), class: "label label-primary" %>
                 <%= link_to 'Delete', post_path(@post), method: :delete, class: 'label label-danger' %>
+                <% end %>
             </small>
         </div>
     </div>
